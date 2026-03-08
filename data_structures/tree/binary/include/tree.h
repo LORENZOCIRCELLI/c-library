@@ -19,15 +19,16 @@ typedef double f64;
 
 typedef struct Treenode Treenode;
 
-Treenode *createNode(int data);
+Treenode *createNode(i32 data);
 
-bool insert(Treenode **root, int data);
-bool deleteDeepestRightmostNode(Treenode *root);
-bool deleteNode(Treenode **root, int data);
+Treenode *insert(Treenode *root, i32 data);
+Treenode *deleteNode(Treenode *root, i32 data);
 
-bool inorderTraversal(Treenode *root);
+void inorder(Treenode *root);
+void postorder(Treenode *root);
+void preorder(Treenode *root);
 
-Treenode *search(Treenode *root, int data);
+Treenode *search(Treenode *root, i32 data);
 Treenode *getDeepestRightmostNode(Treenode *root);
-
+Treenode *findMin(Treenode *root);
 #endif
